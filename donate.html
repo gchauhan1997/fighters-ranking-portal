@@ -61,7 +61,7 @@
     <!-- header -->
 
     <!-- donate and support -->
-    <div class="container my-3 my-md-5 py-3 py-md-5">
+    <div class="container-lg my-3 my-md-5 py-3 py-md-5">
         <div class="card bg-secondary bg-dark shadow border border-dark text-light p-4">
             <h2 class="text-center text-warning">Support Your Fighter or Team</h2>
             
@@ -105,6 +105,36 @@
     
             <!-- Donate Button -->
             <button class="btn btn-warning w-100" id="donateButton">Donate Now</button>
+        </div>
+        <!-- Transaction History -->
+        <div class="rounded-3 bg-dark p-4 mt-4">
+            <h4 class="text-warning">Top-Up History</h4>
+            <div class="overflow-x-auto">
+                <table class="table table-dark table-bordered mt-3">
+                    <thead class="text-nowrap">
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount (USDT)</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-nowrap" id="transactionHistory">
+                        <tr>
+                            <td>2025-03-08</td>
+                            <td>50 USDT</td>
+                            <td>Crypto</td>
+                            <td class="text-success">Completed</td>
+                        </tr>
+                        <tr>
+                            <td>2025-03-05</td>
+                            <td>25 USDT</td>
+                            <td>PayPal</td>
+                            <td class="text-danger">Failed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <!-- donate and support -->
