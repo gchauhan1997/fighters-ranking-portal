@@ -1,0 +1,436 @@
+/* oswald font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+/* oswald font */
+:root {
+    /* --primary-color: #d42222; */
+    --primary-color: #e6ad2d;
+    --bs-primary-rgb: 29, 66, 137;
+    --bs-secondary-rgb: 106, 122, 137;
+    --secondary-color: #7ca8fd;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    background: #0f0f0f;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(135deg, #111 30%, #222 60%, #ffcc00 100%);
+    background-image: linear-gradient(to right bottom, #000000, #251b1b, #080808, #140f0f, #141414);
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+.slick-dots li button:before {
+    color: #fff;
+}
+
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.accordion-button {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.accordion-button::after {
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    background-image: none !important;
+}
+
+.accordion-button.collapsed::after {
+    background-color: var(--bs-gray-300);
+}
+
+input::placeholder {
+    font-size: 14px;
+    color: var(--primary-color) !important;
+}
+
+
+.form-label {
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+
+.primary-btn {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.primary-btn:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.secondary-btn {
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: 8px 12px;
+    background-color: transparent;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.secondary-btn:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* common css end */
+
+/* navbar */
+.navbar {
+    width: 100%;
+    background-color: #0d0d0db9;
+    z-index: 99999;
+}
+
+.navbar .navbar-brand {
+    color: var(--primary-color);
+}
+
+/* navbar */
+
+
+/* hero image */
+.hero-section {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 84px);
+}
+
+.hero-section img {
+    z-index: -2;
+    position: absolute;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.listing-board textarea::placeholder,
+.listing-board input::placeholder,
+.hero-section input::placeholder {
+    color: var(--primary-color);
+}
+
+.listing-board textarea,
+.listing-board input,
+.hero-section input {
+    background-color: #1a1a1ac4;
+    color: var(--primary-color);
+}
+
+/* hero image */
+
+
+.fighter-slider {
+    display: flex;
+    justify-content: center;
+}
+
+.fighter-card {
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    /* box-shadow: 0 4px 20px rgba(255, 204, 0, 0.7); */
+    transition: transform 0.3s;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.fighter-card:hover {
+    transform: scale(1.02);
+    transition: .5s;
+}
+
+.fighter-card img {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+.fighter-info {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.fighter-slider .slick-prev,
+.fighter-slider .slick-next {
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-shadow: 2px 2px 10px var(--primary-color);
+}
+
+.tag {
+    background: var(--primary-color);
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+}
+
+/* vs fight */
+.fighter-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.win-tag {
+    margin-right: 8px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.slick-slide {
+    text-align: center;
+    padding: 10px;
+}
+
+.fight-vs-two .card {
+    background: transparent;
+    color: #fff;
+}
+
+.blog-post-cards .card img {
+    max-height: 240px;
+    object-fit: cover;
+
+}
+
+@media(max-width:1024px) {
+    .hero-section {
+        height: calc(46vh - 84px);
+    }
+
+    .top-ten-fighter {
+        margin-top: -80px !important;
+    }
+}
+
+.fight-card1 {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+    text-align: center;
+}
+
+.fighter-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.win-tag,
+.lose-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 99;
+}
+
+.win-tag {
+    background: #28a745;
+    color: #fff;
+}
+
+.lose-tag {
+    background: #dc3545;
+    color: #fff;
+}
+
+.vs-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.fight-date {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.fighter-stats {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.stat-box {
+    text-align: center;
+    background: var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    width: 80px;
+}
+
+.stat-number {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.stat-label {
+    font-size: 14px;
+}
+
+.profile-card .card {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+    transition: .5s;
+}
+
+
+.comment-box h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.message-box {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-box .username {
+    font-weight: bold;
+}
+
+.message-box .time {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.btn-post {
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    width: 100%;
+}
+
+.post-section {
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    padding: 20px;
+    height: 38vh;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.comment-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 575px) {
+    .hero-section {
+        height: calc(29vh - 60px);
+    }
+    .hero-section form {width: 80% !important;text-align: center !important;}
+    .top-ten-fighter {
+        margin-top: 0 !important;
+    }
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: #fff !important;
+}
+.dataTables_filter,
+.dataTables_length {display: none;}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--primary-color) !important;
+}
+.fighter-img-table {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

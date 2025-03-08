@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Money</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg py-md-3 sticky-top border-body" data-bs-theme="dark">
+        <div class="container-lg">
+            <a class="navbar-brand fs-3" href="#">Fighter APP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <form class="d-flex  mx-auto" role="search">
+                    <input class="form-control me-2 rounded-pill" type="search" placeholder="Search Fighter Name"
+                        aria-label="Search">
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Fighter Private Ranking
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Team Ranking</a></li>
+                            <li><a class="dropdown-item" href="#">Board</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Company Information
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Donate Log</a></li>
+                            <li><a class="dropdown-item" href="#">News</a></li>
+                            <li><a class="dropdown-item" href="#">Money</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- header --> 
+
+    <div class="container my-3 my-lg-5 py-3 py-lg-5">
+        <!-- Wallet Balance Section -->
+        <div class="rounded-3 p-4 text-center d-flex align-items-center justify-content-between gap-3 bg-dark shadow text-light">
+            <h2 class="text-warning m-0 ">Your Wallet</h2>
+            <h3 class="m-0" id="walletBalance">100 USDT</h3>
+        </div>
+    
+        <!-- Top-Up Section -->
+        <div class="rounded-3 shadow  bg-dark p-4 mt-4">
+            <h3 class="text-warning mb-3">Top-Up Wallet</h3>
+            
+            <!-- Top-Up Amount Selection -->
+            <div class="mb-3">
+                <label class="form-label">Select Amount</label>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-warning topup-btn" data-amount="10">10 USDT</button>
+                    <button class="btn btn-outline-warning topup-btn" data-amount="25">25 USDT</button>
+                    <button class="btn btn-outline-warning topup-btn" data-amount="50">50 USDT</button>
+                    <button class="btn btn-outline-warning topup-btn" data-amount="100">100 USDT</button>
+                </div>
+            </div>
+    
+            <!-- Custom Amount -->
+            <div class="mb-3">
+                <input type="number" class="form-control" id="customAmount" placeholder="Enter custom amount in USDT">
+            </div>
+    
+            <!-- Payment Options -->
+            <div class="mb-3">
+                <label class="form-label">Payment Method</label>
+                <select class="form-select" id="paymentMethod">
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="crypto">Crypto (USDT, BTC, ETH)</option>
+                </select>
+            </div>
+    
+            <!-- Top-Up Button -->
+            <button class="btn btn-outline-warning w-100" id="topupButton">Top-Up Now</button>
+        </div>
+    
+        <!-- Transaction History -->
+        <div class="rounded-3 bg-dark p-4 mt-4">
+            <h4 class="text-warning">Top-Up History</h4>
+            <div class="overflow-x-auto">
+                <table class="table table-dark table-bordered mt-3">
+                    <thead class="text-nowrap">
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount (USDT)</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-nowrap" id="transactionHistory">
+                        <tr>
+                            <td>2025-03-08</td>
+                            <td>50 USDT</td>
+                            <td>Crypto</td>
+                            <td class="text-success">Completed</td>
+                        </tr>
+                        <tr>
+                            <td>2025-03-05</td>
+                            <td>25 USDT</td>
+                            <td>PayPal</td>
+                            <td class="text-success">Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <!-- Donation History -->
+        <div class="rounded-3 bg-dark shadow p-4 mt-4">
+            <h4 class="text-warning">Donation History</h4>
+            <div class="overflow-x-auto">
+                <table class="table table-dark table-bordered mt-3">
+                    <thead class="text-nowrap">
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount (USDT)</th>
+                            <th>Recipient</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-nowrap" id="donationHistory">
+                        <tr>
+                            <td>2025-03-07</td>
+                            <td>30 USDT</td>
+                            <td>Fighter X</td>
+                            <td class="text-success">Completed</td>
+                        </tr>
+                        <tr>
+                            <td>2025-03-02</td>
+                            <td>20 USDT</td>
+                            <td>Team Y</td>
+                            <td class="text-success">Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <footer class="container-lg pt-3 pt-md-5">
+        <div class="d-flex justify-content-between align-items-center border-top pt-4">
+            <div class="d-flex align-items-center">
+                <h3 class="mb-0 text-white"><i class="fas fa-fire text-danger"></i> <strong>Fighter</strong></h3>
+                <span class="ms-2 text-white">APP</span>
+            </div>
+            <div class="d-flex">
+                <a href="#" class="text-white mx-3"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-white mx-3"><i class="fab fa-x-twitter fa-lg"></i></a>
+                <a href="#" class="text-white mx-3 me-0"><i class="fab fa-youtube fa-lg"></i></a>
+            </div>
+        </div>
+        <div class="my-3 my-md-4 gap-3 d-flex flex-wrap justify-content-between text-white">
+            <div class="left d-flex flex-wrap gap-3">
+                <p class="mb-0"><strong>Company:</strong> Korean, Company</p> | 
+                <p class="mb-0"><strong>CEO:</strong> John Doe</p>
+            </div>
+            <div class="right d-flex flex-wrap gap-3">
+                <a class="text-white" href="#">Text Link</a> | 
+                <a class="text-white" href="#">Text Link</a> | 
+                <a class="text-white" href="#">Text Link</a>
+            </div>
+        </div>
+        
+        <div class="my-3 d-flex justify-content-between text-white small">
+           
+                <p>© Korean, Company, 2025</p>
+                <p>All Right Reserved</p>
+            
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
