@@ -279,7 +279,13 @@ h1 {
     .top-ten-fighter {
         margin-top: -80px !important;
     }
+    .top-ten-fighter .fighter-slider img {
+        max-width: 75%;
+    }
 }
+
+.fight-vs-two .card img { border: 8px solid gray; max-height: 380px;object-fit: cover;  }
+
 
 .fight-card1 {
     background: #222;
@@ -427,6 +433,7 @@ footer a:hover {
     .top-ten-fighter {
         margin-top: 20px !important;
     }
+    .fight-vs-two .card img {  max-height: 250px; }
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button,
