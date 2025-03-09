@@ -14,15 +14,21 @@ $(document).ready(function () {
                 }
             },
             {
+                
                 breakpoint: 768, // Example breakpoint (tablets)
                 settings: {
-                    slidesToShow: 2 // Show 2 slides on tablets
+                    slidesToShow: 2, // Show 2 slides on tablets
+                    dots: true,
+                    arrows: false,
                 }
             },
             {
+               
                 breakpoint: 576, // Example breakpoint (smaller tablets/large phones)
                 settings: {
-                    slidesToShow: 1 // Show 1 slide on smaller screens
+                    slidesToShow: 1, // Show 1 slide on smaller screens
+                    dots: true,
+                    arrows: false,
                 }
             }
            
@@ -39,6 +45,16 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         dots: false,
         arrows: true,
+        responsive: [
+                {
+                    breakpoint: 1024, // Example breakpoint (tablets)
+                    settings: {
+                        dots: true,
+                        arrows: false,
+                    }
+                   
+                }
+            ]
     });
 });
 
