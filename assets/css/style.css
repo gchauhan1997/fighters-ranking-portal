@@ -136,7 +136,12 @@ img {
     color: var(--primary-color);
 }
 
-.navbar form input { text-align: center !important; width: 300px; max-width: 100%;}
+.navbar form input {
+    text-align: center !important;
+    width: 300px;
+    max-width: 100%;
+}
+
 /* navbar */
 
 
@@ -173,6 +178,7 @@ img {
 .hero-section input {
     text-align: center;
 }
+
 /* hero image */
 
 
@@ -279,13 +285,18 @@ h1 {
     .top-ten-fighter {
         margin-top: -80px !important;
     }
+
     .top-ten-fighter .fighter-slider img {
         max-height: 280px;
         object-fit: cover;
     }
 }
 
-.fight-vs-two .card img { border: 8px solid gray; max-height: 380px;object-fit: cover;  }
+.fight-vs-two .card img {
+    border: 8px solid gray;
+    max-height: 380px;
+    object-fit: cover;
+}
 
 
 .fight-card1 {
@@ -434,7 +445,10 @@ footer a:hover {
     .top-ten-fighter {
         margin-top: 20px !important;
     }
-    .fight-vs-two .card img {  max-height: 250px; }
+
+    .fight-vs-two .card img {
+        max-height: 250px;
+    }
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button,
@@ -544,4 +558,23 @@ footer a:hover {
     max-width: 100%;
     object-fit: cover;
     max-height: 250px;
+}
+
+.login-left {
+    background: url(../img/giphy\ \(2\).gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.signup-left {
+    background: url(../img/giphy\ \(1\).gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.signup-right,
+.login-right {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #3b3934 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
