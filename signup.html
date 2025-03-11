@@ -26,101 +26,108 @@
             <div class="col-lg-5 d-flex flex-column signup-right gap-2 align-items-center justify-content-center">
                 <div class="card my-3 py-lg-5 my-lg-5 mx-auto" style="max-width: 500px;">
                     <div class="card-body py-5">
-                        
                         <h1 class="fw-bold login-title text-center">Signup</h1>
-                        <!-- <h2 class="h4 theme-color fw-bold mb-4"> Log in </h2> -->
-                        <div class=" small mb-4">
-                            <div>
-                                <p class="w-75 mx-auto mb-1 text-center">Please check that the address of the site you
-                                    are visiting matches the one below.</p>
-                            </div>
+                        <div class="small mb-4">
+                            <p class="w-75 mx-auto mb-1 text-center">
+                                Please check that the address of the site you are visiting matches the one below.
+                            </p>
                         </div>
-
+                    
                         <form name="flogin">
                             <input type="hidden" name="url" value="https%3A%2F%2Fgoldenticket.com">
-
+                    
                             <div class="mx-auto" style="max-width: 340px;">
                                 <div class="mb-4">
-                                   
-                                    <input type="text" name="mb_id" id="login_id" required=""
-                                        class="w-100 required border px-3 p-1 rounded-2" maxlength="20"
-                                        placeholder="Full Name">
+                                    <input type="text" name="full_name" required class="w-100 required border px-3 p-1 rounded-2" maxlength="50" placeholder="Full Name">
                                 </div>
-                               
+                    
                                 <div class="mb-4">
-                                    <input type="number" name="mb_id" id="login_id" required=""
-                                        class="w-100 required border px-3 p-1 rounded-2" maxlength="20"
-                                        placeholder="Mobile Number">
+                                    <input type="number" name="mobile_number" required class="w-100 required border px-3 p-1 rounded-2" maxlength="20" placeholder="Mobile Number">
                                 </div>
+                    
                                 <div class="mb-4">
-                                   
-                                    <input type="email" name="mb_id" id="login_id" required=""
-                                        class="w-100 required border px-3 p-1 rounded-2" maxlength="20"
-                                        placeholder="Email id">
+                                    <input type="email" name="email" required class="w-100 required border px-3 p-1 rounded-2" maxlength="50" placeholder="Email ID">
                                 </div>
+                    
                                 <div class="mb-4">
-                                    
-                                    <input type="password" name="mb_password" id="login_pw" required=""
-                                        class="w-100 required login-input border px-3 p-1 rounded-2" maxlength="20"
-                                        placeholder="password">
+                                    <input type="password" name="password" required class="w-100 required border px-3 p-1 rounded-2" maxlength="20" placeholder="Password">
                                 </div>
+                    
                                 <div class="mb-4">
-                                    <input type="text" name="mb_id" id="login_id" required=""
-                                        class="w-100 required border px-3 p-1 rounded-2" maxlength="20"
-                                        placeholder="Full Address">
+                                    <input type="text" name="address" required class="w-100 required border px-3 p-1 rounded-2" maxlength="100" placeholder="Full Address">
                                 </div>
+                    
                                 <div class="mb-4">
-                                    <select name="" id="" class="w-100 required border px-3 p-2 rounded-2">
+                                    <select name="user_type" id="userType" class="w-100 required border px-3 p-2 rounded-2">
                                         <option value="" selected disabled>Select Type</option>
-                                        <option value="">Retailer</option>
-                                        <option value="">Partner</option>
+                                        <option value="Retailer">Retailer</option>
+                                        <option value="Partner">Partner</option>
                                     </select>
-                                   
                                 </div>
-
+                    
+                                <!-- Hidden Image Upload Field -->
+                                <div class="mb-3 input-group" id="uploadField" style="display: none;">
+                                    <label class="small fw-bold">Upload Profile Photo:</label>
+                                    <input type="file" name="business_document" class="form-control w-100 border px-3 p-1 rounded-2">
+                                </div>
+                    
+                                <div class="mb-4">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms" class="small">
+                                        I agree to the <a href="javascript:void(0);" onclick="toggleTerms()">Terms and Conditions</a>.
+                                    </label>
+                                </div>
+                    
+                                <!-- Collapsible Terms and Conditions -->
+                                <div id="termsContent" class="border p-3 rounded-2 mb-3 bg-light small" style="display: none;max-height: 200px;overflow-y: auto;">
+                                    <h6 class="fw-bold">Terms and Conditions</h6>
+                                    <p>By registering on this platform, you agree to comply with our policies and guidelines. We ensure your data privacy and security. Your account may be suspended if any fraudulent activity is detected.</p>
+                                    <p><strong>1. Eligibility:</strong> You must be at least 18 years old.</p>
+                                    <p><strong>2. Data Usage:</strong> Your personal data will be securely stored and used only for verification and account management.</p>
+                                    <p><strong>3. Prohibited Activities:</strong> Any attempt at fraud, misuse, or illegal activities will lead to immediate account termination.</p>
+                                    <p><strong>4. Payments:</strong> All transactions are final, and refunds are subject to company policies.</p>
+                                </div>
+                    
                                 <div class="d-grid mb-4">
-                                    <button type="submit" class="primary-btn btn btn-warning py-2"> Register</button>
+                                    <button type="submit" class="primary-btn btn btn-warning py-2">Register</button>
                                 </div>
-
+                    
                                 <div class="text-secondary small mb-4 text-center">
-                                    <a class="text-secondary text-decoration-none" href=""> Find ID </a>
-                                    |
-                                    <a class="text-secondary text-decoration-none" href=""> Find Password </a>
-                                    |
-                                    <a class="text-secondary text-decoration-none" href="#"> Help </a>
+                                    <a class="text-secondary text-decoration-none" href="">Find ID</a> |
+                                    <a class="text-secondary text-decoration-none" href="">Find Password</a> |
+                                    <a class="text-secondary text-decoration-none" href="#">Help</a>
                                 </div>
                             </div>
-
+                    
                             <div class="small mb-0 text-center">
                                 Already a member?
-                                <a href="login.html" class="text-decoration-none"> Sign In
-                                </a>
+                                <a href="login.html" class="text-decoration-none">Sign In</a>
                             </div>
                         </form>
                     </div>
+                    
+                    <script>
+                        function toggleTerms() {
+                            var termsContent = document.getElementById("termsContent");
+                            if (termsContent.style.display === "none") {
+                                termsContent.style.display = "block";
+                            } else {
+                                termsContent.style.display = "none";
+                            }
+                        }
+                    
+                        document.getElementById("userType").addEventListener("change", function () {
+                            var uploadField = document.getElementById("uploadField");
+                            if (this.value === "Partner") {
+                                uploadField.style.display = "block";
+                            } else {
+                                uploadField.style.display = "none";
+                            }
+                        });
+                    </script>
+                    
                 </div>
-                <div class="d-none">
-                    <div
-                        class="shadow bg-white rounded-3 p-4 d-flex flex-column align-items-center justify-content-center">
-                        <h3 class="my-5 my-lg-5 fw-bold">Logo</h3>
-                        <input placeholder="username" type="text" class="w-100 p-2 my-2 border rounded-2">
-                        <input placeholder="password" type="password" class="w-100 my-2 p-2 border rounded-2">
-                        <a href="" class="btn w-100 btn-primary">Login</a>
-                        <div class="d-flex mt-3 w-100">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                    auto login
-                                </label>
-                            </div>
-                        </div>
-                        <p class="text-muted text-center w-100 my-3">
-                            To find your ID/password, please contact Customer CenterPlease contact us at
-                        </p>
-                        <p class=" fw-semibold">Not yet a member? <a class="text-decoration-none"
-                                href="signup.html">signup</a></p>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
