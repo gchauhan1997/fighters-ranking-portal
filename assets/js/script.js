@@ -97,3 +97,23 @@ document.getElementById('submit-btn').addEventListener('click', function () {
 
  // alert('Post submitted successfully!\n\nTitle: ' + title + '\nContent: ' + editorData + '\nPassword: ' + (password ? 'Yes' : 'No Password'));
 });
+
+// register page 
+
+function toggleTerms() {
+    var termsContent = document.getElementById("termsContent");
+    if (termsContent.style.display === "none") {
+        termsContent.style.display = "block";
+    } else {
+        termsContent.style.display = "none";
+    }
+}
+
+document.getElementById("userType").addEventListener("change", function () {
+    var uploadField = document.getElementById("uploadField");
+    if (this.value === "Partner") {
+        uploadField.style.display = "block";
+    } else {
+        uploadField.style.display = "none";
+    }
+});
